@@ -5,8 +5,20 @@
     padding: 0
 
 body
+    max-width: 1024px
+    height: 100vh
+    margin: auto
+    display: flex
+    flex-direction: column
+    gap: 100px
+    align-items: center
+    justify-content: center
+    padding: 20px
     font-family: 'Spartan'
-    background-image: url('./images/')
+    background-image: url('../images/bg-pattern-top-desktop.svg'), url('../images/bg-pattern-bottom-desktop.svg')
+    background-repeat: none
+    background-size: cover
+    background-position: bottom
     a
         text-decoration: none
         color: inherit
@@ -23,7 +35,7 @@ body
         color: variables.$primary-color
     &-stars
         width: 380px
-        height: 37px
+        height: 30px
         margin-top: 5px
         padding: 1rem
         border-radius: 18px
@@ -38,20 +50,44 @@ body
         .rated-by
             margin-left: 10px
 
-
-
-
 main
     display: flex
+    gap: 10px
     justify-content: space-around
-    align-items: center
 
     .card
+        width: 360px
+        aspect-ratio: 1.6/1
+        padding: 12px
+        display: flex
+        flex-direction: column
+        gap: 25px
+        color: variables.$light-magenta
+        border-radius: 5px
         background-color: variables.$primary-color
+        &-header
+            height: fit-content
+            display: flex
+            gap: 20px
+            .card-img
+                width: 50px
+                border-radius: 50%
+
+            &-title
+                display: flex
+                flex-direction: column
+                gap: 5px
+                justify-content: flex-end
+                &-profile-name
+                    font-weight: bold
+                .card-subtitle
+                    color: variables.$secondary-color
 
 .attribution
+    width: 100%
     font-size: 12px
     text-align: center
-
+    position: fixed
+    bottom: 10px
     a
         color: hsl(228, 45%, 44%)
