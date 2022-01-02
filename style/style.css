@@ -16,9 +16,8 @@ body {
   padding: 20px;
   font-family: "Spartan";
   background-image: url("../images/bg-pattern-top-desktop.svg"), url("../images/bg-pattern-bottom-desktop.svg");
-  background-repeat: none;
-  background-size: cover;
-  background-position: bottom;
+  background-repeat: no-repeat;
+  background-position: 0px 0px, bottom 0 right 0;
 }
 body a {
   text-decoration: none;
@@ -48,8 +47,26 @@ body p, body span {
 }
 .header-right {
   display: grid;
-  grid-template-columns: repeat(5, 0.3fr);
+  grid-template-columns: repeat(9, 0.05fr);
   grid-template-rows: repeat(3, 1fr);
+}
+.header-right #rate-1 {
+  grid-column-start: 1;
+  grid-column-end: 7;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+.header-right #rate-2 {
+  grid-column-start: 2;
+  grid-column-end: 8;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+.header-right #rate-3 {
+  grid-column-start: 3;
+  grid-column-end: 9;
+  grid-row-start: 3;
+  grid-row-end: 4;
 }
 .header-stars {
   width: 400px;
