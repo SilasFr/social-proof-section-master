@@ -6,15 +6,40 @@
 
 body
     font-family: 'Spartan'
+    background-image: url('./images/')
     a
         text-decoration: none
         color: inherit
     p, span
         font-size: 15px
 
-header
+.header
     display: flex
     justify-content: space-between
+    &-title
+        color: variables.$primary-color
+
+    &-paragraph
+        color: variables.$primary-color
+    &-stars
+        width: 380px
+        height: 37px
+        margin-top: 5px
+        padding: 1rem
+        border-radius: 18px
+        display: flex
+        gap: 5px
+        flex-direction: row
+        align-items: center
+        font-weight: bold
+        color: variables.$primary-color
+        background-color: variables.$light-magenta
+
+        .rated-by
+            margin-left: 10px
+
+
+
 
 main
     display: flex
