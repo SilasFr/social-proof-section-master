@@ -1,10 +1,11 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  max-width: 1024px;
+  max-width: 1200px;
   height: 100vh;
   margin: auto;
   display: flex;
@@ -28,18 +29,31 @@ body p, body span {
 }
 
 .header {
+  width: 100%;
   display: flex;
   justify-content: space-between;
 }
 .header-title {
+  font-size: 2.6em;
   color: #502050;
 }
 .header-paragraph {
   color: #502050;
 }
+.header-left {
+  max-width: 460px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.header-right {
+  display: grid;
+  grid-template-columns: repeat(5, 0.3fr);
+  grid-template-rows: repeat(3, 1fr);
+}
 .header-stars {
-  width: 380px;
-  height: 30px;
+  width: 400px;
+  height: 50px;
   margin-top: 5px;
   padding: 1rem;
   border-radius: 18px;
@@ -56,9 +70,10 @@ body p, body span {
 }
 
 main {
-  display: flex;
-  gap: 10px;
-  justify-content: space-around;
+  width: 100%;
+  display: grid;
+  grid-template-rows: repeat(5, 0.13fr);
+  grid-template-columns: repeat(3, 1fr);
 }
 main .card {
   width: 360px;
@@ -91,6 +106,20 @@ main .card-header-title-profile-name {
 }
 main .card-header-title .card-subtitle {
   color: #ee68a4;
+}
+main #card1 {
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+main #card2 {
+  grid-row-start: 2;
+  grid-row-end: 4;
+  grid-column-end: 3;
+}
+main #card3 {
+  grid-row-start: 3;
+  grid-row-end: 5;
+  grid-column-end: 4;
 }
 
 .attribution {
